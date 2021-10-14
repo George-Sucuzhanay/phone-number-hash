@@ -6,3 +6,21 @@
 
 
 module.exports = encryptPhoneNumber;
+
+
+function encryptPhoneNumber(number) {
+  let myHashedNum = "";
+  for (let i = 0; i < number.length; i++){
+    if(i < 7 && number[i] != "-"){
+      myHashedNum += "*"
+    }
+    else{
+      myHashedNum += number[i]
+    }
+  }
+  return myHashedNum
+}
+
+console.log(encryptPhoneNumber('111-223-1123'))
+
+
